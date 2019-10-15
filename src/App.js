@@ -2,7 +2,7 @@ import React from "react";
 import Form from "./form/form";
 import Weather from "./weather/weather";
 import './App.css'
-// import Map from "./maps/maps";
+
 
 const URL = "http://api.openweathermap.org/data/2.5/weather?q=";
 const API_KEY = "&appid=abacceaec861b12e6d69c3f60c510584";
@@ -11,7 +11,7 @@ class App extends React.Component {
 
     state = {
         temperature: undefined,
-        city: undefined,
+        city: "react js",
         country: undefined,
         humidity: undefined,
         description: undefined,
@@ -111,7 +111,13 @@ class App extends React.Component {
 
 
     render() {
-        const image_img=(<img className='left-col-bg cols-height' src={"https://source.unsplash.com/600x450/?"+this.state.city} alt="No image"/>);
+        const image_img = (
+            <img
+                className='left-col-bg cols-height'
+                src={"https://source.unsplash.com/600x450/?" + this.state.city}
+                alt="No image"
+                title='Выдает случайное фото по ключевому слову из сайта "unsplash.com"'
+            />);
 
         return (
             <div className='bg-color'>

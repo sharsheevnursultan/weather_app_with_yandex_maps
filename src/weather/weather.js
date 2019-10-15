@@ -17,7 +17,7 @@ const Weather = (props) => (
                 <span>
                     Температура:
                 </span>
-                <span>{props.temperature}°C</span>
+                <span>{props.temperature} °C</span>
             </div>}
             {props.humidity &&
             <div className='d-flex justify-content-between weather-padding'>

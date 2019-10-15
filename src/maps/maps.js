@@ -1,108 +1,92 @@
-// Google Maps Component ------
-// Wraps the google maps API
+import React from 'react';
 
-import React, {Component} from 'react';
+const URL = "http://api.openweathermap.org/data/2.5/weather?q=";
+const API_KEY = "&appid=abacceaec861b12e6d69c3f60c510584";
 
-class GoogleMaps extends Component {
-    constructor() {
-        super();
-    }
+export default class Images extends React.Component {
 
-    shouldComponentUpdate() {
-        return false;
-    }
-
-    componentWillReceiveProps(nextProps) {
-        this._setOptions(
-            nextProps.lat,
-            nextProps.lng,
-            nextProps.zoom
-        );
-    }
-
-    componentDidMount() {
-        this._renderMap();
-    }
-
-    _setOptions(lat, lng, zoom) {
-        let mapOptions = {
-            center: { lat, lng },
-            zoom
-        };
-        console.log(mapOptions);
-
-        this._map.setOptions(mapOptions);
-    }
-
-    _renderMap() {
-        let mapOptions= {
-            center: { lat: this.props.lat, lng: this.props.lng },
-            zoom: this.props.zoom
-        };
-        this._map = new google.maps.Map(this._map, mapOptions);
-    }
-
-    render() {
-        return (
-            <div id="map" ref={m => this._map = m} />
-        );
-    }
-}
-
-// Application component ----
-
-class Map extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-            lat: -34.397,
-            lng: 150.644,
-            zoom: 8
-        };
-        this._handleFormSubmit = this._handleFormSubmit.bind(this);
-    }
-
-    _handleFormSubmit(e) {
+    getWeather = async (e) => {
         e.preventDefault();
-        if (this._lat.value.length > 0)
-            this.setState({ lat: parseFloat(this._lat.value) });
-        if (this._lng.value.length > 0)
-            this.setState({ lng: parseFloat(this._lng.value) });
-        if (this._zoom.value.length > 0)
-            this.setState({ zoom: parseInt(this._zoom.value) });
-    }
+        const city = e.target.elements.city.value;
+        try {
+            const api_call = await fetch(`${URL}+${city}+${API_KEY}&units=metric`);
+            const weatherData = await api_call.json();
 
-    render() {
-        return (
-            <div>
-                <h1>Google Maps in React JS</h1>
-                <form>
-                    <div>
-                        <label>Lat</label>
-                        <input type="number"
-                               name="lat"
-                               defaultValue={this.state.lat}
-                               ref={i => this._lat = i} />
-                        <label>Lng</label>
-                        <input type="number"
-                               name="lng"
-                               defaultValue={this.state.lng}
-                               ref={i => this._lng = i} />
-                        <label>Zoom</label>
-                        <input type="number"
-                               name="zoom"
-                               defaultValue={this.state.zoom}
-                               ref={i => this._zoom = i} />
-                    </div>
-                    <button onClick={this._handleFormSubmit}>Submit</button>
-                </form>
-                <GoogleMaps
-                    lat={this.state.lat}
-                    lng={this.state.lng}
-                    zoom={this.state.zoom} />
-            </div>
-        );
-    }
+            console.log(weatherData);
+            console.log(weatherData.name);
+            console.log(weatherData.cod);
+            if (city) {
+                let sunset = weatherData.sys.sunset * 1000;
+                let date = new Date();
+                date.setTime(sunset);
+                let sunsetDate = date.getHours() + ':' + date.getMinutes();
+
+                let sunrise = weatherData.sys.sunrise * 1000;
+                let date2 = new Date();
+                date2.setTime(sunrise);
+                let sunriseDate = date2.getHours() + ':' + date2.getMinutes();
+
+                this.setState({
+                    temperature: weatherData.main.temp,
+                    city: weatherData.name,
+                    country: weatherData.sys.country,
+                    humidity: weatherData.main.humidity,
+                    speed: weatherData.wind.speed,
+                    description: weatherData.weather[0].description,
+                    weatherIcon: weatherData.weather[0].icon,
+                    sunset: sunsetDate,
+                    sunrise: sunriseDate,
+                    error: undefined,
+                    notFoundCode: undefined,
+                    notFoundMessage: undefined
+
+                });
+            } else {
+                this.setState({
+                    temperature: undefined,
+                    city: undefined,
+                    country: undefined,
+                    humidity: undefined,
+                    speed: undefined,
+                    description: undefined,
+                    weatherIcon: undefined,
+                    sunset: undefined,
+                    sunrise: undefined,
+                    error: "Введите название города",
+                    notFoundCode: undefined,
+                    notFoundMessage: undefined
+                });
+            }
+
+        } catch {
+            const api_call = await fetch(`${URL}+${city}+${API_KEY}&units=metric`);
+            const weatherData = await api_call.json();
+            console.log(weatherData);
+            console.log(weatherData.name);
+            if (city) {
+                this.setState({
+                    temperature: undefined,
+                    city: undefined,
+                    country: undefined,
+                    humidity: undefined,
+                    speed: undefined,
+                    description: undefined,
+                    weatherIcon: undefined,
+                    sunset: undefined,
+                    sunrise: undefined,
+                    error: 'Имя введено неправильно',
+                    notFoundCode: weatherData.cod,
+                    notFoundMessage: weatherData.message
+                });
+            } else {
+                this.setState({
+                    notFoundCode: undefined,
+                    error: "Введите название города",
+                    notFoundMessage: undefined
+                });
+            }
+        }
+
+    };
+
 }
-
-export default Map;
