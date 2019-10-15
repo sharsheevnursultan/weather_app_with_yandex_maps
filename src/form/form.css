@@ -1,0 +1,36 @@
+.centering{
+   text-align: center;
+}
+
+.form-input-name{
+    font-family: Montserrat,sans-serif;
+    /*width: 70%;*/
+    margin: 2em 1em 1em 1em;
+    border: 0;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.form-input-submit{
+    font-family:"Montserrat",sans-serif;
+    background: yellow;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: 0;
+    border-radius: 5px;
+    color: red;
+    padding: 5px 15px 5px 5px;
+
+}
+.underline-work-text {
+    height: 1px;
+    background: #e5e5e5;
+    margin: 1em ;
+}
+
+.svg-find{
+    width: 18px;
+    height: 18px;
+    fill: red;
+    margin: 0 5px;
+}

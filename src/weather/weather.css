@@ -1,0 +1,15 @@
+.weather-padding{
+    margin:0 1em ;
+    font-family: Montserrat, sans-serif;
+    letter-spacing: -1px;
+    font-size: 20px;
+    font-weight: 300;
+}
+.weather-padding span{
+
+    font-family: Montserrat, sans-serif;
+    /*letter-spacing: -1px;*/
+    font-weight: 500;
+}
+
+
