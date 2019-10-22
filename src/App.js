@@ -75,7 +75,7 @@ class App extends React.Component {
                     weatherIcon: undefined,
                     sunset: undefined,
                     sunrise: undefined,
-                    error: "Type city name",
+                    error: "Enter city name",
                     notFoundCode: undefined,
                     notFoundMessage: undefined,
                     coord_lat: undefined,
@@ -100,14 +100,14 @@ class App extends React.Component {
                     weatherIcon: undefined,
                     sunset: undefined,
                     sunrise: undefined,
-                    error: 'City nme incorrect',
+                    error: 'Invalid city name',
                     notFoundCode: weatherData.cod,
                     notFoundMessage: weatherData.message
                 });
             } else {
                 this.setState({
                     notFoundCode: undefined,
-                    error: "Type city name",
+                    error: "Enter city name",
                     notFoundMessage: undefined
                 });
             }
