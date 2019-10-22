@@ -120,17 +120,17 @@ class App extends React.Component {
 
                 elem = document.getElementById('color_toggle');
                 if (elem.classList.contains('bg-color')) {
-                    elem.classList.replace('bg-color', 'black-bg-color')
-                } else if (elem.classList.contains('black-bg-color')) {
-                    elem.classList.replace('black-bg-color', 'bg-color')
+                    elem.classList.replace('bg-color', 'black-bg-color-without-border')
+                } else if (elem.classList.contains('black-bg-color-without-border')) {
+                    elem.classList.replace('black-bg-color-without-border', 'bg-color')
                 }
 
 
                 elem2 = document.getElementById('color_toggle2');
                 if (elem2.classList.contains('main-top-app-name')) {
-                    elem2.classList.replace('main-top-app-name', 'black-bg-color');
-                } else if (elem2.classList.contains('black-bg-color')) {
-                    elem2.classList.replace('black-bg-color', 'main-top-app-name');
+                    elem2.classList.replace('main-top-app-name', 'app-name-black-bg-color');
+                } else if (elem2.classList.contains('app-name-black-bg-color')) {
+                    elem2.classList.replace('app-name-black-bg-color', 'main-top-app-name');
                 }
 
 
@@ -163,7 +163,7 @@ class App extends React.Component {
             <div id='color_toggle' className='bg-color'>
                 <div className='card-holder'>
                     <h1 id='color_toggle2' className='card main-top-app-name'>Weather App
-                        <span onClick={myTumbler}>
+                        <span onClick={myTumbler} title='Night mode'>
                             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="yin-yang"
                                  className="yin-yang-tumbler" role="img" id='color_toggle4'
                                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
