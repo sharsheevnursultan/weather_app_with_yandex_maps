@@ -7,7 +7,7 @@ const Weather = (props) => (
             {props.city && props.country &&
             <div className='d-flex justify-content-between weather-padding'>
                 <span>
-                    Город:
+                    City:
                 </span>
                 <span>{props.city}, {props.country}</span>
             </div>}
@@ -15,34 +15,34 @@ const Weather = (props) => (
             {props.temperature &&
             <div className='d-flex justify-content-between weather-padding'>
                 <span>
-                    Температура:
+                    Temp:
                 </span>
                 <span>{props.temperature} °C</span>
             </div>}
             {props.humidity &&
             <div className='d-flex justify-content-between weather-padding'>
                 <span>
-                    Влажность:
+                    Humidity:
                 </span>
                 <span>{props.humidity} %</span>
             </div>}
             {props.speed &&
             <div className='d-flex justify-content-between weather-padding'>
                 <span>
-                    Ветер:
+                    Wind speed:
                 </span>
-                <span>{props.speed} м/с</span>
+                <span>{props.speed} m/s</span>
             </div>}
             {props.sunrise &&
             <div className='d-flex justify-content-between weather-padding'>
                 <span>
-                     Восход:
+                     Sunrise:
                 </span>
                 <span>{props.sunrise}</span></div>}
             {props.sunset &&
             <div className='d-flex justify-content-between weather-padding'>
                 <span>
-                    Закат:
+                    Sunset:
                 </span>
                 <span>{props.sunset}</span></div>}
             {props.notFoundCode &&

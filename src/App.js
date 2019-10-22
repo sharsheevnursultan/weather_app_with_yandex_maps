@@ -2,6 +2,7 @@ import React from "react";
 import Form from "./form/form";
 import Weather from "./weather/weather";
 import './App.css'
+import {YMaps, Map} from 'react-yandex-maps';
 
 
 const URL = "http://api.openweathermap.org/data/2.5/weather?q=";
@@ -11,7 +12,7 @@ class App extends React.Component {
 
     state = {
         temperature: undefined,
-        city: "react js",
+        city: undefined,
         country: undefined,
         humidity: undefined,
         description: undefined,
@@ -21,7 +22,8 @@ class App extends React.Component {
         error: undefined,
         notFoundCode: undefined,
         notFoundMessage: undefined,
-
+        coord_lat: undefined,
+        coord_lon: undefined
     };
 
 
@@ -58,8 +60,9 @@ class App extends React.Component {
                     sunrise: sunriseDate,
                     error: undefined,
                     notFoundCode: undefined,
-                    notFoundMessage: undefined
-
+                    notFoundMessage: undefined,
+                    coord_lat: weatherData.coord.lat,
+                    coord_lon: weatherData.coord.lon
                 });
             } else {
                 this.setState({
@@ -72,9 +75,12 @@ class App extends React.Component {
                     weatherIcon: undefined,
                     sunset: undefined,
                     sunrise: undefined,
-                    error: "Введите название города",
+                    error: "Type city name",
                     notFoundCode: undefined,
-                    notFoundMessage: undefined
+                    notFoundMessage: undefined,
+                    coord_lat: undefined,
+                    coord_lon: undefined
+
                 });
             }
 
@@ -94,38 +100,51 @@ class App extends React.Component {
                     weatherIcon: undefined,
                     sunset: undefined,
                     sunrise: undefined,
-                    error: 'Имя введено неправильно',
+                    error: 'City nme incorrect',
                     notFoundCode: weatherData.cod,
                     notFoundMessage: weatherData.message
                 });
             } else {
                 this.setState({
                     notFoundCode: undefined,
-                    error: "Введите название города",
+                    error: "Type city name",
                     notFoundMessage: undefined
                 });
             }
         }
-
     };
 
 
     render() {
-        const image_img = (
-            <img
-                className='left-col-bg cols-height'
-                src={"https://source.unsplash.com/600x450/?" + this.state.city}
-                alt="No image"
-                title='Выдает случайное фото по ключевому слову из сайта "unsplash.com"'
-            />);
+        let myTumbler = (elem, elem2, elem3, elem4, elem5) => {
+            elem = document.getElementById('color_toggle');
+            elem.classList.replace('bg-color', 'black-bg-color');
+            elem2 = document.getElementById('color_toggle2');
+            elem2.classList.replace('main-top-app-name', 'black-bg-color');
+            elem3 = document.getElementById('color_toggle3');
+            elem3.classList.replace('left-col-bg', 'black-bg-color');
+            elem4 = document.getElementById('color_toggle4');
+            elem4.classList.replace('yin-yang-tumbler', 'white-yin-yang-tumbler');
+            elem5 = document.getElementById('color_toggle5');
+            elem5.classList.replace('left-col-bg', 'black-bg-color');
+            console.log("Hello World!");
+        };
 
         return (
-            <div className='bg-color'>
+            <div id='color_toggle' className='bg-color'>
                 <div className='card-holder'>
-                    <h1 className='card main-top-app-name'>Weather App</h1>
+                    <h1 id='color_toggle2' className='card main-top-app-name'>Weather App
+                        <span onClick={myTumbler}>
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="yin-yang"
+                                 className="yin-yang-tumbler" role="img" id='color_toggle4'
+                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                                <path
+                                    d="M248 8C111.03 8 0 119.03 0 256s111.03 248 248 248 248-111.03 248-248S384.97 8 248 8zm0 376c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm0-128c-53.02 0-96 42.98-96 96s42.98 96 96 96c-106.04 0-192-85.96-192-192S141.96 64 248 64c53.02 0 96 42.98 96 96s-42.98 96-96 96zm0-128c-17.67 0-32 14.33-32 32s14.33 32 32 32 32-14.33 32-32-14.33-32-32-32z"></path>
+                            </svg></span>
+                    </h1>
                     <div className='row'>
                         <div className='col-md-6 '>
-                            <div className='left-col-bg cols-height'>
+                            <div id='color_toggle3' className='left-col-bg cols-height'>
 
                                 <Form getWeather={this.getWeather}/>
                                 <Weather
@@ -145,8 +164,18 @@ class App extends React.Component {
                             </div>
                         </div>
                         <div className='col-md-6'>
-
-                            {image_img}
+                            <div id='color_toggle5' className='left-col-bg cols-height'>
+                                <YMaps>
+                                    <div>
+                                        <Map state={{
+                                            center: [this.state.coord_lat, this.state.coord_lon],
+                                            zoom: 9,
+                                            controls: ['zoomControl', 'fullscreenControl'],
+                                        }} modules={['control.ZoomControl', 'control.FullscreenControl']}
+                                             className='ymaps-size'/>
+                                    </div>
+                                </YMaps>
+                            </div>
                         </div>
 
                     </div>
