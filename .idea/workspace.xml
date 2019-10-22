@@ -20,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="100" column="38" lean-forward="true" selection-start-line="100" selection-start-column="38" selection-end-line="100" selection-end-column="38" />
+            <state relative-caret-position="124">
+              <caret line="142" lean-forward="true" selection-start-line="142" selection-end-line="142" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -32,7 +32,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="70">
+            <state relative-caret-position="1156">
               <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
             </state>
           </provider>
@@ -220,12 +220,12 @@
       <workItem from="1570637163534" duration="5452000" />
       <workItem from="1571038371852" duration="14779000" />
       <workItem from="1571739232557" duration="5099000" />
-      <workItem from="1571749771072" duration="8333000" />
+      <workItem from="1571749771072" duration="9856000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59617000" />
+    <option name="totallyTimeSpent" value="61140000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -360,13 +360,6 @@
     <entry file="file://$PROJECT_DIR$/images/yin-yang-solid.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/weather/weather.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -374,10 +367,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1156">
+          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="100" column="38" lean-forward="true" selection-start-line="100" selection-start-column="38" selection-end-line="100" selection-end-column="38" />
+        <state relative-caret-position="124">
+          <caret line="142" lean-forward="true" selection-start-line="142" selection-end-line="142" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

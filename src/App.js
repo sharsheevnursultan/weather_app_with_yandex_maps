@@ -117,18 +117,47 @@ class App extends React.Component {
 
     render() {
         let myTumbler = (elem, elem2, elem3, elem4, elem5) => {
-            elem = document.getElementById('color_toggle');
-            elem.classList.replace('bg-color', 'black-bg-color');
-            elem2 = document.getElementById('color_toggle2');
-            elem2.classList.replace('main-top-app-name', 'black-bg-color');
-            elem3 = document.getElementById('color_toggle3');
-            elem3.classList.replace('left-col-bg', 'black-bg-color');
-            elem4 = document.getElementById('color_toggle4');
-            elem4.classList.replace('yin-yang-tumbler', 'white-yin-yang-tumbler');
-            elem5 = document.getElementById('color_toggle5');
-            elem5.classList.replace('left-col-bg', 'black-bg-color');
-            console.log("Hello World!");
-        };
+
+                elem = document.getElementById('color_toggle');
+                if (elem.classList.contains('bg-color')) {
+                    elem.classList.replace('bg-color', 'black-bg-color')
+                } else if (elem.classList.contains('black-bg-color')) {
+                    elem.classList.replace('black-bg-color', 'bg-color')
+                }
+
+
+                elem2 = document.getElementById('color_toggle2');
+                if (elem2.classList.contains('main-top-app-name')) {
+                    elem2.classList.replace('main-top-app-name', 'black-bg-color');
+                } else if (elem2.classList.contains('black-bg-color')) {
+                    elem2.classList.replace('black-bg-color', 'main-top-app-name');
+                }
+
+
+                elem3 = document.getElementById('color_toggle3');
+                if (elem3.classList.contains('left-col-bg')) {
+                    elem3.classList.replace('left-col-bg', 'black-bg-color');
+                } else if (elem3.classList.contains('black-bg-color')) {
+                    elem3.classList.replace('black-bg-color', 'left-col-bg');
+                }
+
+
+                elem4 = document.getElementById('color_toggle4');
+                if (elem4.classList.contains('yin-yang-tumbler')) {
+                    elem4.classList.replace('yin-yang-tumbler', 'white-yin-yang-tumbler');
+                } else if (elem4.classList.contains('white-yin-yang-tumbler')) {
+                    elem4.classList.replace('white-yin-yang-tumbler', 'yin-yang-tumbler');
+                }
+
+
+                elem5 = document.getElementById('color_toggle5');
+                if (elem5.classList.contains('left-col-bg')) {
+                    elem5.classList.replace('left-col-bg', 'black-bg-color');
+                } else if (elem5.classList.contains('black-bg-color')) {
+                    elem5.classList.replace('black-bg-color', 'left-col-bg');
+                }
+            }
+        ;
 
         return (
             <div id='color_toggle' className='bg-color'>
