@@ -15,7 +15,7 @@
 }
 
 .black-bg-color {
-    border: 1px solid gray;
+    /*border: 1px solid gray;*/
     color: grey;
     background: black;
     border-radius: 0.5rem;
@@ -28,7 +28,7 @@
 
 }
 
-.app-name-black-bg-color{
+.app-name-black-bg-color {
     border: 1px solid gray;
     color: grey;
     background: black;
@@ -100,11 +100,25 @@
 .yin-yang-tumbler {
     fill: black;
     background: white;
+    transition: .5s;
+
+}
+
+.yin-yang-tumbler:hover {
+    /*fill: red;*/
+    background: white;
+    transform: rotate(360deg);
 }
 
 .white-yin-yang-tumbler {
     fill: white;
     background: black;
+    transition: .5s;
+}
+.white-yin-yang-tumbler:hover {
+    fill: black;
+    background: white;
+    transform: rotate(360deg);
 }
 
 #color_toggle3, #color_toggle5 {

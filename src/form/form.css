@@ -16,11 +16,16 @@
     background: yellow;
     text-transform: uppercase;
     font-weight: 700;
-    border: 0;
+
     border-radius: 5px;
     color: red;
     padding: 5px 15px 5px 5px;
+    transition: .5s;
+    border: 1px solid yellow;
+}
 
+.form-input-submit:hover{
+    border: 1px solid dodgerblue;
 }
 .underline-work-text {
     height: 1px;
