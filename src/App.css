@@ -116,8 +116,8 @@
     transition: .5s;
 }
 .white-yin-yang-tumbler:hover {
-    fill: black;
-    background: white;
+    fill: white;
+    background: black;
     transform: rotate(360deg);
 }
 
