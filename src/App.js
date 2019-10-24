@@ -125,14 +125,12 @@ class App extends React.Component {
                     elem.classList.replace('black-bg-color-without-border', 'bg-color')
                 }
 
-
                 elem2 = document.getElementById('color_toggle2');
                 if (elem2.classList.contains('main-top-app-name')) {
                     elem2.classList.replace('main-top-app-name', 'app-name-black-bg-color');
                 } else if (elem2.classList.contains('app-name-black-bg-color')) {
                     elem2.classList.replace('app-name-black-bg-color', 'main-top-app-name');
                 }
-
 
                 elem3 = document.getElementById('color_toggle3');
                 if (elem3.classList.contains('left-col-bg')) {
@@ -141,14 +139,12 @@ class App extends React.Component {
                     elem3.classList.replace('black-bg-color', 'left-col-bg');
                 }
 
-
                 elem4 = document.getElementById('color_toggle4');
                 if (elem4.classList.contains('yin-yang-tumbler')) {
                     elem4.classList.replace('yin-yang-tumbler', 'white-yin-yang-tumbler');
                 } else if (elem4.classList.contains('white-yin-yang-tumbler')) {
                     elem4.classList.replace('white-yin-yang-tumbler', 'yin-yang-tumbler');
                 }
-
 
                 elem5 = document.getElementById('color_toggle5');
                 if (elem5.classList.contains('left-col-bg')) {
@@ -163,7 +159,7 @@ class App extends React.Component {
             <div id='color_toggle' className='bg-color'>
                 <div className='card-holder'>
                     <h1 id='color_toggle2' className='card main-top-app-name'>Weather App
-                        <span onClick={myTumbler} title='Night mode'>
+                        <span onClick={myTumbler} title='Dark mode'>
                             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="yin-yang"
                                  className="yin-yang-tumbler" role="img" id='color_toggle4'
                                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
