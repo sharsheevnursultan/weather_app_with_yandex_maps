@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b7eeeeb1-1d25-44c7-8e11-87a0cdeb302f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/weather/weather.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/weather/weather.js" afterDir="false" />
-    </list>
+    <list default="true" id="b7eeeeb1-1d25-44c7-8e11-87a0cdeb302f" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,8 +78,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/weather/weather.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
+            <state relative-caret-position="260">
+              <caret line="75" column="90" selection-start-line="75" selection-start-column="30" selection-end-line="75" selection-end-column="92" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -234,12 +230,12 @@
       <workItem from="1571749771072" duration="12037000" />
       <workItem from="1571815074542" duration="5137000" />
       <workItem from="1571933355528" duration="37000" />
-      <workItem from="1571933546095" duration="269000" />
+      <workItem from="1571933546095" duration="750000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68764000" />
+    <option name="totallyTimeSpent" value="69245000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -390,8 +386,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/weather/weather.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
+        <state relative-caret-position="260">
+          <caret line="75" column="90" selection-start-line="75" selection-start-column="30" selection-end-line="75" selection-end-column="92" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

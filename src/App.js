@@ -5,7 +5,7 @@ import './App.css'
 import {YMaps, Map} from 'react-yandex-maps';
 
 
-const URL = "http://api.openweathermap.org/data/2.5/weather?q=";
+const URL = "https://api.openweathermap.org/data/2.5/weather?q=";
 const API_KEY = "&appid=abacceaec861b12e6d69c3f60c510584";
 
 class App extends React.Component {
