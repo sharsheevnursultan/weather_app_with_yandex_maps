@@ -192,12 +192,14 @@ class App extends React.Component {
                             <div id='color_toggle5' className='left-col-bg cols-height'>
                                 <YMaps>
                                     <div>
-                                        <Map state={{
-                                            center: [this.state.coord_lat, this.state.coord_lon],
-                                            zoom: 9,
-                                            controls: ['zoomControl', 'fullscreenControl'],
-                                        }} modules={['control.ZoomControl', 'control.FullscreenControl']}
-                                             className='ymaps-size'/>
+                                        <Map className='ymaps-size'
+                                             state={{
+                                                 center: [this.state.coord_lat, this.state.coord_lon],
+                                                 zoom: 9,
+                                                 controls: ['zoomControl', 'fullscreenControl'],
+                                             }}
+                                             modules={['control.ZoomControl', 'control.FullscreenControl']}
+                                        />
                                     </div>
                                 </YMaps>
                             </div>
