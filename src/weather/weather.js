@@ -66,7 +66,7 @@ const Weather = (props) => {
             <div>
                 {state.weatherIcon &&
                 <div className='d-flex justify-content-between weather-padding'>
-                    <span> </span>
+                    <span>Статус:</span>
                     <span>
                     <img
                         src={'https://openweathermap.org/img/w/' + state.weatherIcon + '.png'}
