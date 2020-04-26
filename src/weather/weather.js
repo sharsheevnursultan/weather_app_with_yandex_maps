@@ -29,6 +29,11 @@ const Weather = (props) => {
                     <span>Температура:</span>
                     <span>{state.temperature} °C</span>
                 </div>}
+                {state.description &&
+                <div className='d-flex justify-content-between weather-padding'>
+                    <span>Описание:</span>
+                    <span>{state.description}</span>
+                </div>}
                 {state.humidity &&
                 <div className='d-flex justify-content-between weather-padding'>
                     <span>Влажность:</span>
