@@ -1,6 +1,7 @@
 import React from "react";
 import Form from "./form/form";
 import Weather from "./weather/weather";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 import {YMaps, Map} from 'react-yandex-maps';
 import Header from "./header/Header";
