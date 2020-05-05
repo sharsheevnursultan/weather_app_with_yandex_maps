@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b7eeeeb1-1d25-44c7-8e11-87a0cdeb302f" name="Default Changelist" comment="" />
+    <list default="true" id="b7eeeeb1-1d25-44c7-8e11-87a0cdeb302f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/form/form.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/Form.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/form/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/Form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Header/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weather/weather.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Weather/Weather.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weather/weather.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Weather/Weather.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -94,7 +103,8 @@
       <workItem from="1572590584210" duration="913000" />
       <workItem from="1572599019980" duration="6241000" />
       <workItem from="1587327112179" duration="11420000" />
-      <workItem from="1587730534192" duration="2723000" />
+      <workItem from="1587730534192" duration="3198000" />
+      <workItem from="1588712207311" duration="4022000" />
     </task>
     <servers />
   </component>
@@ -117,21 +127,21 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1345" height="179" key="GridCell.Tab.0.bottom" timestamp="1587906554619">
+    <state width="1345" height="179" key="GridCell.Tab.0.bottom" timestamp="1587907407963">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1345" height="179" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1587906554619" />
-    <state width="1345" height="179" key="GridCell.Tab.0.center" timestamp="1587906554619">
+    <state width="1345" height="179" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1587907407963" />
+    <state width="1345" height="179" key="GridCell.Tab.0.center" timestamp="1587907407961">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1345" height="179" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1587906554619" />
-    <state width="1345" height="179" key="GridCell.Tab.0.left" timestamp="1587906554619">
+    <state width="1345" height="179" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1587907407961" />
+    <state width="1345" height="179" key="GridCell.Tab.0.left" timestamp="1587907407959">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1345" height="179" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1587906554619" />
-    <state width="1345" height="179" key="GridCell.Tab.0.right" timestamp="1587906554619">
+    <state width="1345" height="179" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1587907407959" />
+    <state width="1345" height="179" key="GridCell.Tab.0.right" timestamp="1587907407962">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1345" height="179" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1587906554619" />
+    <state width="1345" height="179" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1587907407962" />
   </component>
 </project>

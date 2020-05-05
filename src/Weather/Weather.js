@@ -1,5 +1,5 @@
 import React from "react";
-import '../weather/weather.css'
+import './Weather.css'
 
 const Weather = (props) => {
     let state = {
@@ -22,7 +22,7 @@ const Weather = (props) => {
                 {state.city && state.country &&
                 <div className='d-flex justify-content-between weather-padding'>
                     <span>Город:</span>
-                    <span>{state.city}, {state.country}</span>
+                    <span>{state.city+', '+state.country}</span>
                 </div>}
                 {state.temperature &&
                 <div className='d-flex justify-content-between weather-padding'>

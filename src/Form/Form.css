@@ -3,7 +3,6 @@
 }
 
 .form-input-name {
-    font-family: Montserrat, sans-serif;
     margin: 2em 1em 1em 1em;
     border: 0;
     border-radius: 5px;
@@ -11,14 +10,13 @@
 }
 
 .form-input-submit {
-    font-family: "Montserrat", sans-serif;
     background: yellow;
     text-transform: uppercase;
     font-weight: 700;
     border-radius: 5px;
     color: red;
-    padding: 5px 15px 5px 5px;
-    transition: .5s;
+    padding: 5px;
+    transition: .3s;
     border: 1px solid yellow;
 }
 
@@ -28,11 +26,4 @@
 
 .form-input-submit:hover {
     border: 1px solid red;
-}
-
-.svg-find {
-    width: 18px;
-    height: 18px;
-    fill: red;
-    margin: 0 5px;
 }

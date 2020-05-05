@@ -1,10 +1,10 @@
 import React from "react";
-import Form from "./form/form";
-import Weather from "./weather/weather";
+import Form from "./Form/Form";
+import Weather from "./Weather/Weather";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 import {YMaps, Map} from 'react-yandex-maps';
-import Header from "./header/Header";
+import Header from "./Header/Header";
 
 const URL = "https://api.openweathermap.org/data/2.5/weather?q=";
 const API_KEY = "&appid=abacceaec861b12e6d69c3f60c510584";
@@ -112,20 +112,20 @@ class App extends React.Component {
 
     render() {
         return (
-            <div id='color_toggle' className='bg-color'>
+            <div className='bg-color'>
                 <div className='card-holder'>
                     <Header/>
-                    <div className='row'>
-                        <div className='col-md-6 '>
-                            <div id='color_toggle3' className='left-col-bg cols-height'>
+                    <div className='row '>
+                        <div className='col-md-6 mb-4'>
+                            <div id='color_toggle3' className='cols-bg'>
                                 <Form getWeather={this.getWeather}/>
                                 <Weather state={this.state}/>
                             </div>
                         </div>
-                        <div className='col-md-6'>
-                            <div id='color_toggle5' className='left-col-bg cols-height'>
+                        <div className='col-md-6 mb-4'>
+                            <div id='color_toggle5' className='cols-bg'>
                                 <YMaps>
-                                    <Map className='ymaps-size'
+                                    <Map className='maps-size'
                                          state={{
                                              center: [this.state.coord_lat, this.state.coord_lon],
                                              zoom: 9,
